@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DNA Canvas</title>
+
+<!-- <link rel="stylesheet" href="assets/css/dna.css" /> -->
+<style>
+        html, body {
+        margin: 0px;
+        background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+    }
+    canvas {
+        height: 100%;
+        width: 100%;
+        background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+    }
+</style>
+</head>
+
+
+
+<body>
+    <canvas id="canvas" width="100" height="400" alignbottom ></canvas>
+
+  
+
+
+    <!-- <script src="assets/css/canvas.js"> -->
+
+        <script>
+        var canvas = document.getElementById('canvas'),
+                context = canvas.getContext('2d'),
+                width = canvas.width = 1000,
+                height = canvas.height = 190,
+                
+                K = 0.015,
+                B = 40,     
+                move = 0;
+
+            context.strokeStyle = "#EBEDEF";
+            context.fillStyle = '#D6DBDF';
+            
+
+            (function drawFrame(){
+                window.requestAnimationFrame(drawFrame, canvas);
+
+                context.clearRect(0, 0, width, height);
+
+                for(var i = 0; i <= width + 80; i++) {
+                    if (i % 20 == (move | 0)) {
+                        context.beginPath();
+
+                        context.moveTo(i, Math.cos(i * K)* B + height/2);
+                        context.lineTo(i - 80, -Math.cos((i-80)* K) * B + height/2);
+                        context.stroke();
+                        context.fill();
+
+                        context.beginPath();
+                        context.arc(i,(Math.cos(i * K)* B + height/2),10,0,2*Math.PI);
+                        context.stroke();
+                        context.fill(); 
+
+                        context.beginPath();
+                        context.arc(i-80,(-Math.cos((i-80)* K) * B + height/2),10,0,2*Math.PI);
+                        context.stroke();
+                        context.fill();
+                    }
+                }
+                if(move == 19) move = 0;
+                else move += 1;
+            })();
+    </script>
+</body>
+</html>
