@@ -1,0 +1,21 @@
+.container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+  .container text {
+     align-items: center;
+  }
+
+  .map path {fill: lightgray; 
+             stroke: white;
+             background-color: #eaeff3;}
+   path:hover {fill: orange;}
+  /* .main #GB{fill:deepskyblue;}
+  .main #IN{fill:orange;}
+  .main #US{fill:pink;}
+  .main #AZ{fill:pink;} */
+  .map {
+    background-color: #eaeff3;
+
+  }

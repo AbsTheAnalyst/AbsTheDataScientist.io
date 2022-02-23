@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Comforter&family=Great+Vibes&family=Josefin+Sans:ital,wght@1,200&family=Josefin+Slab:wght@200&family=Kalam:wght@300&family=Love+Light&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cinzel+Decorative:wght@400;900&family=Hi+Melody&family=Josefin+Sans:ital,wght@0,300;1,400&family=Kaushan+Script&family=Love+Light&family=Niconne&family=Nothing+You+Could+Do&family=Oregano&family=Poiret+One&family=Pompiere&family=Redressed&display=swap');
 
 /*
 	Massively by HTML5 UP
@@ -84,7 +84,9 @@ body{
   background: #1e252d;
 }
 
-
+.cmap text{
+	font-size: 35px;
+}
 
 .fixed1{
   width: 80px;
