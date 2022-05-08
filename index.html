@@ -12,6 +12,7 @@
 
 		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">  
 		<link  href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/netsvg.css" />
@@ -50,7 +51,7 @@
 	
 
           .chart{
-			  display:flex;
+			  display:var(--fa-animation-duration);
 /*              position: relative;*/
               width:480px;
           }
@@ -197,13 +198,11 @@
 							<section class="alt">
 								<h3 style="font-family: cinzel;"><i class="fa-solid fa-cog fa-spin fa-xl" style="color:#1A5276;"></i><i class="fa-solid fa-cog fa-spin fa-beat fa-xl" style="--fa-animation-direction: reverse; opacity: 0.5;" ></i>&nbsp;Knowledge of Machine Learning Algorithms</h3>
 
-
-								<li>- Linear regression</li>
-								<li>- Random forest</li>
-								<li>- Gradient boosted trees</li>
 								<li>- Neural networks</li>
-								<li>- k-means</li>
-								<li>- XGboost</li>
+								<li>- Linear regression</li>
+								<li>- Logistic regression</li>							
+								<li>- k-means clustering</li>
+								
 								<BR>
 								
 								<h3 style="font-family: cinzel;"><i class="fa-brands fa-python  fa-2xl" style="color:#1A5276;">&nbsp;</i>Python Data Stack knowledge </h3>
@@ -220,11 +219,10 @@
 									<h3 style="font-family: cinzel;"><i class="fab fa fa-aws  fa-2xl" style="color:#1A5276;">&nbsp;</i>Knowledge of AWS Services </h3>
 								
 								<li>- S3</li>
-								<li>- RedShift</li>
-								<li>- Athena</li>
-								<li>- Glue</li>
 								<li>- SageMaker</li>
 								<li>- EC2</li>
+								<li>- Athena</li>
+								<li>- AWS Cloud Practitioner (preparing for exam )</li>
 								<BR>
 
 								<BR>
@@ -250,7 +248,7 @@
 											<i class="fa-brands fa-php fa-2xl" >&nbsp;</i><progress id="file" value="68" max="100"> 32% </progress>
 											</div>
 									</div>
-								</div>
+								</div><br>
 								<div class="row" align="center">	
 									<div class="column">
 										<div class="skills" title="HTML5 95%">
@@ -266,14 +264,14 @@
 										</div>
 
 										<div class="column">
-											<div class="skills" title="MySQL 70%" style="color:#1A5276; font-family: cinzel;">
-											<b>SQL</b>&nbsp;&nbsp;&nbsp;<progress id="file" value="70" max="100"> 70% </progress>
+											<div class="skills" title="MySQL 70%" style="color:#1A5276; font-family: cinzel;"><img src="images\mysql.svg" width="14%" height="17%">&nbsp;&nbsp;
+											<progress id="file" value="70" max="100"> 70% </progress>
 											
 										</div>
 										</div>
 									</div>
 
-
+									<!-- <b>SQL</b>&nbsp;&nbsp;&nbsp; -->
 
 								
 								
@@ -310,7 +308,7 @@
 										<div></div>
 
 										<div><BR></div>
-										<div ><h6 style="font-family: cinzel; font-size:16px;"> Responsive Bar and Line plots</h6> </div>
+										<div ><h6 style="font-family: cinzel; font-size:16px;"> Responsive Bar and Line plots <sup>(hover over data points)</sup></h6></div>
 									<script src="assets/js/mow.js" type="text/javascript"></script>
 									<div >
 										<p></p>
@@ -318,8 +316,10 @@
 								
 								<div class="chart"  >
 
-										<canvas id="myChart"></canvas>
-										<canvas id="myChart1"></canvas>
+
+										<canvas id="myChart" class="lazierCanvas" loading="lazy"></canvas>
+										<br><br><br>
+										<canvas id="myChart1" class="lazierCanvas" loading="lazy"></canvas>
 								 </div>
 
 								
@@ -359,7 +359,7 @@
 									  datasets:[
 										  {
 										  data: [50,100,300,500,330,182, 290,500, 615,390,250,400, 620,900],
-										  label:'Sales Worth',
+										  label:'Sales Prediction',
 											  fill: true,
 											  backgroundColor: gradient,
 											  borderColor:"#3498DB",
@@ -439,7 +439,7 @@
 										datasets:[
 											{
 											data: [50,100,300,500,330,182, 290,500, 615,390,250,400, 620,900],
-											label:'Sales Worth',
+											label:'Sales Prediction',
 												fill: true,
 												backgroundColor: gradient1,
 												borderColor:"#3498DB",
@@ -659,13 +659,11 @@
     </div>
         
         <!-- Scripts -->
-
+		
 
 		<script src="assets/js/Vis_gallery.js" type="text/javascript"></script>
         <script src="assets/js/netsvg.js" type="text/javascript"></script>
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>
-
-
 
 
     </body>
