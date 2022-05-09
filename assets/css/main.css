@@ -78,6 +78,9 @@ input, select, textarea {
 
 
 
+
+
+
 /* -------- Barchart animate -----*/
 *,html{margin:0;padding:0}
 body{
@@ -3884,7 +3887,7 @@ body{
 			}
 
 			@media screen and (max-width: 736px) {
-
+				
 				#main > .post {
 					padding: 4rem 2rem 2rem 2rem ;
 				}
