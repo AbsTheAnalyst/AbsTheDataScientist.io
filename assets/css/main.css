@@ -80,6 +80,56 @@ input, select, textarea {
 
 
 
+/* tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+  border-bottom: 0px solid !important;
+  
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #007eb6;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 16px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -150px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-decoration: none;
+}
+ div.column.tooltip {
+	text-decoration:none;
+	display: inline-block;   
+	}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: #007eb6 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  width:250px;
+  height:auto;
+  visibility: visible;
+  opacity: 1;
+}
+/* tooltip */
+
 
 /* -------- Barchart animate -----*/
 *,html{margin:0;padding:0}
